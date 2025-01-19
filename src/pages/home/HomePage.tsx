@@ -1,7 +1,13 @@
+
 const HomePage = () => {
   return (
-    <div>HomePage</div>
-  )
-}
+    <div>
+      hello
+     
 
-export default HomePage
+     
+    </div>
+  );
+};
+
+export default HomePage;
