@@ -2,56 +2,46 @@
 nav {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   background-color: #f8fafc;
   border: none;
-  position: sticky;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-  padding: 0.5rem 2rem;
+  padding: 1.2rem 2rem;
   background-color: #ffffff; /* Background color for the navbar */
   box-shadow: 0 14px 26px rgba(0, 0, 0, 0.1); /* Adds shadow to the navbar */
-  padding: 10px 20px; /* Adjust padding for spacing */
-  position: fixed; /* Makes the navbar fixed at the top */
-  top: 0;
-  width: 100%; /* Full width */
-  z-index: 1000; 
-
-}
-.active {
-  text-decoration: underline;
-  color: #040c9a;
-  
-  
-  
+  width: 100%;
 }
 
-nav ul li a:not(.active):hover {
-  text-decoration: underline ;
-  
+nav ul li a.active {
+  position: relative;
+  color: var(--primary-color) !important;
+  width: max-content;
+  font-weight: 900;
+}
 
-  
-  
-   
-  
+nav ul li a.active::before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: var(--primary-color);
+  box-sizing: border-box;
 }
 
 /* Logo Styles */
 nav .logo {
-  font-size: 34px;
-  margin: 1.1rem 50px;
+  font-size: 2.2rem;
   text-decoration: none;
   color: #01162c;
   background: none;
   font-weight: bold;
 }
 
-
-
 /* Navbar Links Styles */
 nav ul {
   display: flex;
-  margin: 0px 50px;
+  gap: 1.8rem;
 }
 
 nav ul li {
@@ -61,17 +51,15 @@ nav ul li {
 nav ul li a {
   display: block;
   text-decoration: none;
-  color: #040c9a;
+  color: var(--primary-color);
   padding: 0.5rem;
-  margin: 20px;
   font-size: 19px;
   overflow: hidden;
   font-weight: 600;
 }
 
 nav ul li a:hover {
-  text-decoration: underline;
-  font-weight: bold;
+  font-weight: 900;
 }
 
 /* Hamburger Menu Styles */
