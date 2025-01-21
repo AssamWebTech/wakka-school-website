@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import MainLayout from "./MainLayout";
 import HomePage from "./pages/home/HomePage";
 import AboutUs from "./pages/about/AboutUs";
-import ContactUs from "./pages/contact/ContactUs";
+import ContactUs from "./pages/contact/ContactUs"
 
 const App = () => {
   return (

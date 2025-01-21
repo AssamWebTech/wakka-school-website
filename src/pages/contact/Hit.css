@@ -1,0 +1,116 @@
+
+.how-it-works-section {
+    padding: 3rem 1rem;
+    background-color: #ffffff;
+    margin: 5rem;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .header h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #000000;
+  }
+  
+  .header p {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    color: #000000;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .steps-container {
+    position: relative;
+    margin-top: 2rem;
+  }
+  
+  .decorator-line {
+    position: absolute;
+    width: 100%;
+    display: none;
+  }
+  
+  @media (min-width: 768px) {
+    .decorator-line {
+      display: block;
+      top: -1rem;
+      left: 0;
+    }
+  }
+  
+  .steps-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .step {
+    text-align: center;
+  }
+  
+  .step-icon {
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    border: 2px solid #ddd;
+    border-radius: 50%;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #555555;
+    transition: transform 0.3s ease;
+  }
+  
+  .step-icon:hover {
+    transform: scale(1.1);
+  }
+  
+  .step h3 {
+    margin-top: 1rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #000000;
+  }
+  
+  .step p {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: #000000;
+  }
+  
+  /* Responsive Design */
+  @media (min-width: 768px) {
+    .steps-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  
+    .step h3 {
+      font-size: 1.5rem;
+    }
+  
+    .step p {
+      font-size: 1rem;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .header h2 {
+      font-size: 3rem;
+    }
+  
+    .header p {
+      font-size: 1.25rem;
+    }
+  }
+  
