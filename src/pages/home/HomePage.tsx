@@ -2,8 +2,10 @@ import HeroSection from "../../components/herosection/HeroSection";
 
 const HomePage = () => {
   return (
-    <div>
-      <HeroSection /> 
+    <div className="container-fluid">
+      <div className="row">
+        <HeroSection /> 
+      </div>
     </div>
   );
 };

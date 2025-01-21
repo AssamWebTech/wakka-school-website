@@ -3,6 +3,7 @@ import MainLayout from "./MainLayout";
 import HomePage from "./pages/home/HomePage";
 import AboutUs from "./pages/about/AboutUs";
 import ContactUs from "./pages/contact/ContactUs";
+import Events from "./pages/events/Events";
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
           <Route path="/" element={<MainLayout />}>
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutUs />} />
+            <Route path="/events" element={<Events />} />
             <Route path="/contact" element={<ContactUs />} />
           </Route>
         </Routes>
