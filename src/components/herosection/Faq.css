@@ -1,0 +1,136 @@
+.faq-section {
+    background-color: #f9fafb;
+    padding: 4rem 0;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+  }
+  
+  .section-subtitle {
+    font-size: 1.125rem;
+    color: #7f8c8d;
+    margin-top: 0.5rem;
+  }
+  
+  .faq-list {
+    max-width: 3xl;
+    margin-top: 2rem;
+  }
+  
+  .faq-item {
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 1rem;
+  }
+  
+  .faq-button {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    text-align: left;
+    font-size: 1rem;
+  }
+  
+  .faq-question {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .faq-icon {
+    transition: transform 0.3s ease;
+    width: 24px;
+    height: 24px;
+    color: #b0bec5;
+  }
+  
+  .faq-answer {
+    padding: 1rem 2rem;
+    background-color: #fafafa;
+  }
+  
+  .faq-link {
+    color: #1e88e5;
+    text-decoration: none;
+  }
+  
+  .faq-link:hover {
+    text-decoration: underline;
+  }
+  
+  .contact-support {
+    font-weight: 500;
+    color: #1e88e5;
+    text-decoration: none;
+  }
+  
+  .contact-support:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 1024px) {
+    .section-title {
+      font-size: 2rem;
+    }
+  
+    .faq-question {
+      font-size: 1rem;
+    }
+  
+    .faq-answer {
+      padding: 1rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .section-title {
+      font-size: 1.75rem;
+    }
+  
+    .faq-question {
+      font-size: 1.1rem;
+    }
+  
+    .faq-button {
+      padding: 1rem;
+    }
+  
+    .faq-item {
+      margin-bottom: 0.8rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .section-title {
+      font-size: 1.5rem;
+    }
+  
+    .faq-question {
+      font-size: 1rem;
+    }
+  
+    .faq-link {
+      font-size: 0.875rem;
+    }
+  
+    .faq-button {
+      padding: 0.8rem;
+    }
+  }
+  

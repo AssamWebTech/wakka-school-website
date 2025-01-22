@@ -1,0 +1,280 @@
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  padding: 40px;
+  justify-content: center;
+ 
+  border-radius: 15px;
+  margin: 1rem;
+
+}
+.heading {
+  text-align: center;
+  align-items: center;
+  padding: 2rem;
+  font-size: 3rem;
+  color: rgb(19, 19, 73);
+    text-align: center;
+    font-weight: 700;
+    font-size: 45px;
+    padding: 1rem;
+
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+.gallery img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 15px;
+  object-fit: cover;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+}
+
+.gallery img:hover {
+  transform: scale(1.1) rotate(2deg);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+  border: 2px solid #9b9999;
+}
+
+.modal {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.95);
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.5s ease;
+  z-index: 1000;
+}
+
+.modal img {
+  max-width: 80%;
+  max-height: 80%;
+  border-radius: 20px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7);
+  animation: zoomIn 0.3s ease;
+}
+
+.modal .close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 35px;
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.modal .close:hover {
+  color: #ff4d4d;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.8);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.notice-p {
+
+  width: 600px;
+  
+}
+
+.update{
+  margin:7rem 3rem;
+  float: right;
+  
+}
+/* Notice Board Container */
+.notice-board {
+  max-width: 800px;
+  background: linear-gradient(145deg, #e3e6e9, #e6e6e6);
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 40px;
+  text-align: center;
+}
+
+/* Notice Board Title */
+.notice-board h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #000000;
+  border-bottom: 2px solid #ff4d4d;
+  padding-bottom: 10px;
+  display: inline-block;
+}
+
+/* List Styles */
+.notice-board ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Individual List Items */
+.notice-board li {
+  font-size: 1.2rem;
+  margin: 15px 0;
+  padding: 10px;
+  background: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effects for List Items */
+.notice-board li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  background:yellow;
+  cursor: pointer;
+}
+
+/* Responsive Styles for Tablets and Larger Devices */
+@media (min-width: 768px) {
+  .notice-board {
+    max-width: 700px; /* Increased max-width for tablets */
+  }
+ 
+  
+  .notice-board h1 {
+    font-size: 2.5rem; /* Larger title for tablets */
+  }
+
+  .notice-board li {
+    font-size: 1.2rem; /* Maintain font size for larger screens */
+  }
+}
+
+/* Responsive Styles for Small Devices (Mobile Phones) */
+@media (max-width: 768px) {
+  .notice-board {
+    padding: 20px; /* Reduced padding on smaller devices */
+    margin: 3rem auto;
+  }
+  .update {
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  .notice-p {
+    
+    width: 17rem;
+    margin: 0 auto;
+  }
+
+  .notice-board h1 {
+    font-size: 1.8rem; /* Slightly smaller font for smaller screens */
+  }
+
+  .notice-board li {
+    font-size: 1rem; /* Slightly smaller font for readability */
+    padding: 12px; /* Slightly reduced padding for mobile */
+  }
+}
+
+/* Responsive Styles for Extra Small Devices (Phones) */
+@media (max-width: 480px) {
+  .notice-board {
+    padding: 15px; /* Further reduce padding on extra small devices */
+  }
+
+  .notice-board h1 {
+    font-size: 1.5rem; /* Small title for small screens */
+  }
+
+  .notice-board li {
+    font-size: 0.9rem; /* Even smaller font for small mobile devices */
+    padding: 8px; /* Further reduced padding for mobile */
+  }
+
+  .notice-board li:hover {
+    transform: translateY(-3px); /* Less aggressive hover effect */
+  }
+}
+
+/* Center Alignment for Text in Special Cases */
+.text-md-end {
+  min-width: 358px;
+  text-align: center;
+  align-items: center;
+  padding: 2rem;
+}/* Custom CSS for Image Grid Layout */
+.image-grid-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  opacity: 0;
+  margin-top:12rem ;
+  animation: fadeIn 1s forwards;
+}
+
+.image-column {
+  flex: 1 1 30%; /* Default 3 columns layout */
+}
+
+.image-item {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 16px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.image-item:hover {
+  transform: scale(1.05); /* Zoom-in effect on hover */
+  opacity: 0.8; /* Slight opacity change on hover */
+}
+
+/* Fade-in animation when component loads */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 1200px) {
+  .image-column {
+    flex: 1 1 45%; /* Two columns on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .image-column {
+    flex: 1 1 100%; /* Single column on small screens */
+  }
+}
+
+.g-1 {
+  font-size: 2rem;
+  color: #000000;
+  background-color: #002279;
+  height: 3rem;
+  
+}

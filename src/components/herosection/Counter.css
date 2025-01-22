@@ -1,0 +1,81 @@
+.counter-section {
+    background-color: #f4f4f4;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 20px;
+  }
+  
+  .section-subtitle {
+    font-size: 1.25rem;
+    color: #7f8c8d;
+  }
+  
+  .flex {
+    display: flex;
+  }
+  
+  .flex-wrap {
+    flex-wrap: wrap;
+  }
+  
+  .justify-center {
+    justify-content: center;
+  }
+  
+  .counter-item {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 2rem; 
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 250px; /* Set a fixed width for each counter item */
+    flex: 1 1 250px; /* Allow flexibility but restrict minimum width */
+  }
+  
+  .counter-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .counter-value {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #2e75f9;
+    margin-bottom: 10px;
+  }
+  
+  .counter-label {
+    font-size: 1.125rem;
+    color: #34495e;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .counter-value {
+      font-size: 2.5rem;
+    }
+  
+    .counter-label {
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .counter-value {
+      font-size: 2rem;
+    }
+  
+    .counter-label {
+      font-size: 0.9rem;
+    }
+  }
+  

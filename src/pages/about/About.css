@@ -41,6 +41,6 @@
     font-weight: 900;
 }
 
-.about-background .overlay p {
+.about-background .overlay > p {
     font-size: 1.3rem;
 }

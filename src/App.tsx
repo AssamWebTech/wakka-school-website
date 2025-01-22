@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import MainLayout from "./MainLayout";
 import HomePage from "./pages/home/HomePage";
 import AboutUs from "./pages/about/AboutUs";
@@ -15,6 +15,7 @@ const App = () => {
             <Route path="/about" element={<AboutUs />} />
             <Route path="/events" element={<Events />} />
             <Route path="/contact" element={<ContactUs />} />
+            <Route path="/*"element={<Navigate to="/" />} />
           </Route>
         </Routes>
       </BrowserRouter>
