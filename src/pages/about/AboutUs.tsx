@@ -22,6 +22,7 @@ const AboutUs = () => {
           </div>
         </div>
       </section>
+      
       <section className="row gap-5 mx-auto py-5 justify-content-center">
         <div className="col-md-6 col-12 d-flex flex-column gap-5">
           <div id='history'>
@@ -59,7 +60,9 @@ const AboutUs = () => {
           </ul>
         </div>
       </section>
+      
     </main>
+    
   )
 }
 

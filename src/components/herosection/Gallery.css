@@ -106,23 +106,26 @@
   margin:7rem 3rem;
   float: right;
   
-}
-/* Notice Board Container */
+}/* Notice Board Container */
 .notice-board {
-  max-width: 800px;
-  background: linear-gradient(145deg, #e3e6e9, #e6e6e6);
+  background-image: url(../../../public/Assets/notice.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-width: 90%; /* Adaptable width for all screen sizes */
+  margin: 2rem auto; /* Center the component */
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
-  padding: 40px;
+  padding: 20px;
   text-align: center;
+  font-family: "Roboto", sans-serif;
 }
 
 /* Notice Board Title */
 .notice-board h1 {
   font-size: 2rem;
   margin-bottom: 20px;
-  color: #000000;
-  border-bottom: 2px solid #ff4d4d;
+  color: #6f1308;
+  border-bottom: 2px solid #0617b0;
   padding-bottom: 10px;
   display: inline-block;
 }
@@ -131,87 +134,80 @@
 .notice-board ul {
   list-style-type: none;
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
+  width: 600px;
+  max-width: 100%; /* Remove fixed width for better responsiveness */
 }
 
 /* Individual List Items */
 .notice-board li {
   font-size: 1.2rem;
   margin: 15px 0;
-  padding: 10px;
+  padding: 15px;
   background: #ffffff;
   border-radius: 5px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left; /* Align text properly */
 }
 
 /* Hover Effects for List Items */
 .notice-board li:hover {
   transform: translateY(-5px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  background:yellow;
+  background: yellow;
   cursor: pointer;
 }
 
 /* Responsive Styles for Tablets and Larger Devices */
 @media (min-width: 768px) {
   .notice-board {
-    max-width: 700px; /* Increased max-width for tablets */
+    max-width: 700px; /* Fixed width for tablets */
+    padding: 30px;
   }
- 
-  
+
   .notice-board h1 {
     font-size: 2.5rem; /* Larger title for tablets */
   }
 
   .notice-board li {
-    font-size: 1.2rem; /* Maintain font size for larger screens */
+    font-size: 1.3rem; /* Slightly larger font size */
   }
 }
 
 /* Responsive Styles for Small Devices (Mobile Phones) */
 @media (max-width: 768px) {
   .notice-board {
-    padding: 20px; /* Reduced padding on smaller devices */
-    margin: 3rem auto;
-  }
-  .update {
-    margin: 0 auto;
-    padding: 2rem;
-  }
-  .notice-p {
-    
-    width: 17rem;
-    margin: 0 auto;
+    padding: 20px;
   }
 
   .notice-board h1 {
-    font-size: 1.8rem; /* Slightly smaller font for smaller screens */
+    font-size: 1.8rem; /* Adjusted font size */
   }
 
   .notice-board li {
-    font-size: 1rem; /* Slightly smaller font for readability */
-    padding: 12px; /* Slightly reduced padding for mobile */
+    font-size: 1rem; /* Smaller font for readability */
+    padding: 12px;
   }
 }
 
 /* Responsive Styles for Extra Small Devices (Phones) */
 @media (max-width: 480px) {
   .notice-board {
-    padding: 15px; /* Further reduce padding on extra small devices */
+    padding: 15px;
   }
 
   .notice-board h1 {
-    font-size: 1.5rem; /* Small title for small screens */
+    font-size: 1.5rem;
   }
 
   .notice-board li {
-    font-size: 0.9rem; /* Even smaller font for small mobile devices */
-    padding: 8px; /* Further reduced padding for mobile */
+    font-size: 0.9rem;
+    padding: 10px;
   }
 
   .notice-board li:hover {
-    transform: translateY(-3px); /* Less aggressive hover effect */
+    transform: translateY(-3px); /* Softer hover effect */
   }
 }
 

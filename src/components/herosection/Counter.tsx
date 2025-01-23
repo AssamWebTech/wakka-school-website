@@ -1,37 +1,59 @@
-import React from 'react'
-import './Counter.css'
-const Counter = () => {
+import React, { useState, useEffect } from "react";
+import "./Counter.css";
+
+const Counter: React.FC = () => {
+  const counters = [
+    { title: "Students", value: 1200, imgSrc: "../../../public/Assets/notice.jpg", color: "#3498db" },
+    { title: "Teachers", value: 75, imgSrc: "../../../public/Assets/c2.jpeg", color: "#f39c12" },
+    { title: "Classes", value: 50, imgSrc: "../../../public/Assets/notice.jpg", color: "#2ecc71" },
+    { title: "Achievements", value: 150, imgSrc: "../../../public/Assets/N2.jpg", color: "#e74c3c" },
+  ];
+
+  const [countValues, setCountValues] = useState<number[]>([0, 0, 0, 0]);
+
+  // Counter animation
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCountValues((prev) =>
+        prev.map((value, index) =>
+          value < counters[index].value ? value + 5 : value
+        )
+      );
+    }, 30);
+
+    return () => clearInterval(interval);
+  }, [counters]);
+
   return (
-    <>
-       <section className="counter-section py-10 sm:py-16 lg:py-24">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="section-title">Numbers tell our story</h2>
-          <p className="section-subtitle">
-            We are driven by our accomplishments. Take a look at some of our milestones.
-          </p>
-        </div>
-
-        <div className="flex flex-wrap justify-center gap-8 text-center">
-          <div className="counter-item">
-            <h3 className="counter-value">6+</h3>
-            <p className="counter-label">Years in business</p>
+    <section className="counter-section">
+      <div className="counter-header">
+        <h1 className="counter-title">Our Achievements</h1>
+        <p className="counter-subtitle">
+          These numbers reflect our dedication and success in education.
+        </p>
+      </div>
+      <div className="counter-grid">
+        {counters.map((counter, index) => (
+          <div className="counter-card" key={index} style={{ borderLeft: `5px solid ${counter.color}` }}>
+            <div className="counter-image">
+              <img src={counter.imgSrc} alt={counter.title} />
+            </div>
+            <h2 className="counter-value">{countValues[index]}</h2>
+            <p className="counter-label">{counter.title}</p>
+            <div className="progress-bar">
+              <div
+                className="progress"
+                style={{
+                  width: `${(countValues[index] / counter.value) * 100}%`,
+                  backgroundColor: counter.color,
+                }}
+              ></div>
+            </div>
           </div>
-
-          <div className="counter-item">
-            <h3 className="counter-value">4821</h3>
-            <p className="counter-label">Projects delivered</p>
-          </div>
-
-          <div className="counter-item">
-            <h3 className="counter-value">37+</h3>
-            <p className="counter-label">Team members</p>
-          </div>
-        </div>
+        ))}
       </div>
     </section>
-    </>
-  )
-}
+  );
+};
 
-export default Counter
+export default Counter;

@@ -8,6 +8,7 @@ import Counter from "./Counter";
 import Gallery from "./Gallery";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import React, { useEffect } from "react"
 
 const HeroSection = () => {
   const navigate = useNavigate();
@@ -67,6 +68,31 @@ const HeroSection = () => {
     "Maintenance alert: The library will be closed this Friday.",
     "Submit your project reports by the end of this week.",
   ];
+
+
+  const [currentDateTime, setCurrentDateTime] = useState<string>("");
+
+  useEffect(() => {
+    // Update the date and time dynamically
+    const updateDateTime = () => {
+      const now = new Date();
+      const options: Intl.DateTimeFormatOptions = {
+        weekday: "long",
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit",
+      };
+      setCurrentDateTime(now.toLocaleDateString("en-US", options));
+    };
+
+    // Update every second
+    const interval = setInterval(updateDateTime, 1000);
+
+    return () => clearInterval(interval); // Cleanup interval on unmount
+  }, []);
   return (
     <>
       <div
@@ -77,7 +103,7 @@ const HeroSection = () => {
         <div className="carousel-inner">
           <div className="carousel-item active">
             <img
-              src="../../../public/Assets/c1.jpeg"
+              src="../../../public/Assets/c3.jpeg"
               className="d-block w-100 h-60"
               alt="..."
             />
@@ -114,7 +140,7 @@ const HeroSection = () => {
             className="carousel-control-prev-icon"
             aria-hidden="true"
           ></span>
-          <span className="visually-hidden">Previous</span>
+          <span className="visually-hidden ">Previous</span>
         </button>
         <button
           className="carousel-control-next"
@@ -138,62 +164,69 @@ const HeroSection = () => {
 
         <div className="container text-center ">
           <div className="row">
-            <div className="col">
-              <img
-                src="../../../public/Assets/p1.jpeg"
-                className="d-block w-100 "
-                alt="..."
-              />
-            </div>
-            <div className="col">
-              <h2>About </h2>
-              <p className="text-md-end">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa
-                deserunt maiores illum asperiores aliquam nobis, est excepturi
-                tempore tempora mollitia distinctio ab nihil blanditiis corporis
-                dicta veritatis beatae adipisci dolorem. Lorem ipsum dolor sit,
-                amet consectetur adipisicing elit. Et ducimus iste repellendus
-                ex voluptatem, libero quisquam, soluta architecto alias autem
-                iure mollitia Lorem ipsum dolor sit amet consectetur adipisicing
-                elit. Quis recusandae voluptatibus, dolore, eius amet dolores
-                est voluptas in consectetur ea non consequuntur enim illo Lorem
-                ipsum dolor sit amet consectetur adipisicing elit. Repellendus
-                quaerat doloremque perferendis dolor? Fuga eveniet tempora
-                quisquam ducimus alias nihil, necessitatibus voluptas vero ea!
-                Dolorum deserunt aliquid corporis veniam ut!veritatis ipsam
-                sequi, consequatur praesentium unde. voluptas maxime vero itaque
-                dicta unde. Alias, temporibus.
-              </p>
-              <button type="button" className="btn btn-primary" onClick={() => navigate("/about")}>
-                About us
-              </button>
-            </div>
-          </div>
+            
+            <section className="about-section">
+      <div className="about-container">
+        <div className="about-text">
+          <h1 className="about-title">About Us</h1>
+          <p className="about-paragraph">
+            Welcome to our website! We are dedicated to providing exceptional
+            services that empower individuals and organizations. Our mission is
+            to deliver innovative solutions with a focus on quality, creativity,
+            and client satisfaction. Whether you are looking for technology
+            solutions, consultation, or a platform to grow, we are here to
+            assist you.
+          </p>
+          <p className="about-paragraph">
+            Our team comprises highly skilled professionals who work tirelessly
+            to meet and exceed your expectations. Join us on our journey to
+            create a better, more connected future.
+          </p>
+          <button type="button" className="btn btn-primary df">About Us</button>
+          
+        </div>
+        
+        <div className="about-image">
+          <img
+            src="../../../public/Assets/p1.jpeg"
+            alt="About Us"
+            className="responsive-image"
+          />
         </div>
       </div>
+      
+    </section>
+    </div>
+    
+    </div>
+      </div>
       <div>
-        <div className="update">
-          <p className="notice-p">
-            <h1>Notice Updates</h1>
-            Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor, sit amet
-            consectetur adipisicing elit. Eligendi, aut nisi architecto
-            obcaecati ea deserunt suscipit cumque necessitatibus Lorem ipsum
-            dolor sit amet consectetur adipisicing elit. Sit distinctio, dolorem
-            repellat sint, aperiam molestiae quae, quo nesciunt pariatur iure id
-            earum impedit illum? Hic porro Lorem ipsum dolor sit, amet
-            consectetur adipisicing elit. Impedit doloremque distinctio eius,
-            corrupti asperiores dolor temporibus. Architecto enim voluptates
-            culpa qui aliquid, perspiciatis saepe, exercitationem voluptatibus
-            dolorum Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Sint obcaecati accusantium enim rem maiores ex aspernatur architecto
-            ab quod voluptatibus, nam nisi saepe aliquid molestiae ullam natus!
-            Nihil, sit? Lorem ipsum dolor sit amet consectetur, adipisicing
-            elit. Impedit ut illo, porro, aliquam voluptas hic dolores nobis
-            libero corrupti officia tiae mollitia velit deserunt ratione
-            sapiente corrupti modi! Iste, dicta earum. Voluptatum doloribus
-            harum iure molestiae illum in!
+      <section className="notice-section">
+      <div className="notice-container">
+        <div className="notice-image">
+          <img
+            src="../../../public/Assets/N2.jpg"
+            alt="Notice Board"
+            className="responsive-image"
+          />
+        </div>
+        <div className="notice-content">
+          <h1 className="notice-title">Notice Updates</h1>
+          <p className="notice-date-time">Date & Time: {currentDateTime}</p>
+          <p className="notice-paragraph">
+            Stay informed with the latest updates and announcements! Here, you
+            will find essential information, upcoming events, and important
+            notices. Keep checking this section regularly to stay updated with
+            what's happening.
+          </p>
+          <p className="notice-paragraph">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae
+            sapien ut purus feugiat efficitur non a nisl. Suspendisse potenti.
+            Ut volutpat fermentum metus, sed vestibulum nisi ultrices id.
           </p>
         </div>
+      </div>
+    </section>
       </div>
 
       <div className="notice-board">

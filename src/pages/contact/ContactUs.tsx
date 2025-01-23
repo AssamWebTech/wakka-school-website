@@ -20,24 +20,30 @@ export const ContactUs = () => {
               </div>
               <MDBRow className="mb-4">
                 <MDBCol md="6">
-                  <MDBInput id="form6Example1" label="First name" />
+                  <label>First Name</label>
+                  <MDBInput id="form6Example1" required />
                 </MDBCol>
                 <MDBCol md="6">
-                  <MDBInput id="form6Example2" label="Last name" />
+                <label>Last Name</label>
+                  <MDBInput id="form6Example2" />
                 </MDBCol>
               </MDBRow>
-              <MDBInput wrapperClass="mb-4" id="form6Example4" label="Address" />
+              <label>Email </label>
+              <MDBInput wrapperClass="mb-4" id="form6Example4"  />
               <MDBInput
                 wrapperClass="mb-4"
                 type="email"
                 id="form6Example5"
-                label="Email"
+                
               />
+              <label>Phone</label>
+
               <MDBInput
+                 
                 wrapperClass="mb-4"
                 type="tel"
                 id="form6Example6"
-                label="Phone"
+                
               />
 
               <MDBInput

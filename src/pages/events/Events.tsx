@@ -38,7 +38,7 @@ const Events = () => {
               </div>
               {
                 (item.id % 2 === 0) && 
-                <div className="col-3">
+                <div className="col-3 er">
                   <img src='../../../public/Assets/p1.jpeg' height={'100%'} width={'100%'}></img>
                 </div>
               }

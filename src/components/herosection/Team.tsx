@@ -1,66 +1,45 @@
+
 import React from 'react'
-import './Team.css'
-const Team = () => {
+
+export const Team = () => {
+
+  const teachers = [
+    {
+      name: "Mr. John Doe",
+      subject: "Mathematics",
+      bio: "Passionate about solving problems and making math enjoyable for all students.",
+      image: "../../../public/Assets/notice.jpg",
+    },
+    {
+      name: "Ms. Jane Smith",
+      subject: "Science",
+      bio: "Dedicated to inspiring curiosity and fostering a love for science.",
+      image: "../../../public/Assets/notice.jpg",
+    },
+    {
+      name: "Mrs. Emily Johnson",
+      subject: "English",
+      bio: "Loves bringing stories to life and enhancing communication skills.",
+      image: "../../../public/Assets/notice.jpg",
+    },
+  ];
   return (
     <>
-      <section className="teachers-section">
-      <div className="section-header text-center">
-        <h2>Meet Our Teachers</h2>
-        <p>Learn from the best educators in the field</p>
+    <div className="meet-our-teachers">
+      <h1>Meet Our Teachers</h1>
+      <div className="teacher-grid">
+        {teachers.map((teacher, index) => (
+          <div key={index} className="teacher-card">
+            <img src={teacher.image} alt={`${teacher.name}`} className="teacher-image" />
+            <h2>{teacher.name}</h2>
+            <h3>{teacher.subject}</h3>
+            <p>{teacher.bio}</p>
+          </div>
+        ))}
       </div>
-
-      <div className="teachers-grid">
-        <div className="teacher-card animated-card">
-          <img
-            src="../../../public/Assets/WhatsApp Image 2025-01-20 at 2.48.54 PM.jpeg"
-            alt="Teacher 1"
-            className="teacher-image"
-          />
-          <div className="teacher-info">
-            <h3>John Doe</h3>
-            <p>Maths Instructor</p>
-          </div>
-        </div>
-
-        <div className="teacher-card animated-card">
-          <img
-            src="../../../public/Assets/WhatsApp Image 2025-01-20 at 2.48.58 PM (3).jpeg"
-            alt="Teacher 2"
-            className="teacher-image"
-          />
-          <div className="teacher-info">
-            <h3>Jane Smith</h3>
-            <p>Science Instructor</p>
-          </div>
-        </div>
-
-        <div className="teacher-card animated-card">
-          <img
-            src="../../../public/Assets/WhatsApp Image 2025-01-20 at 2.50.59 PM.jpeg"
-            alt="Teacher 3"
-            className="teacher-image"
-          />
-          <div className="teacher-info">
-            <h3>Michael Brown</h3>
-            <p>English Instructor</p>
-          </div>
-        </div>
-
-        <div className="teacher-card animated-card">
-          <img
-            src="../../../public/Assets/WhatsApp Image 2025-01-20 at 2.50.55 PM.jpeg"
-            alt="Teacher 4"
-            className="teacher-image"
-          />
-          <div className="teacher-info">
-            <h3>Sarah Johnson</h3>
-            <p>History Instructor</p>
-          </div>
-        </div>
-      </div>
-    </section>
+    </div>
     </>
+
   )
 }
-
-export default Team
+export default Team;
