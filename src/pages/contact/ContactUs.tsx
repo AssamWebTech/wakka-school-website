@@ -6,6 +6,7 @@ import {
   MDBInput,
   MDBCheckbox,
   MDBBtn,
+  MDBTextArea
 } from "mdb-react-ui-kit";
 
 export const ContactUs = () => {
@@ -40,7 +41,7 @@ export const ContactUs = () => {
                 label="Phone"
               />
 
-              <MDBInput
+              <MDBTextArea
                 wrapperClass="mb-4"
                 textarea
                 id="form6Example7"

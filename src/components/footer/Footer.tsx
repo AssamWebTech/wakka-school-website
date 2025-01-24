@@ -25,7 +25,7 @@ const SchoolFooter = () => {
             <h3 className='footer-title'>City Office</h3>
             <p>123 Main street, 2nd block <br/> Wakka - 123456, Arunachal Pradesh</p>
             <h3 className='footer-title'>School Office Hours</h3>
-            <div className='flex gap-3 align-items-center'><FontAwesomeIcon icon={faClock} className='text-warning' />8AM - 4PM</div>
+            <div className='flex gap-3 align-items-center'><FontAwesomeIcon icon={faClock} className='text-warning' />8 AM - 4 PM</div>
             <div className='flex gap-3 align-items-center'><FontAwesomeIcon icon={faCalendarAlt} className='text-warning' />Monday - Saturday</div>
           </div>
 
@@ -40,7 +40,7 @@ const SchoolFooter = () => {
             </ul>
           </div>
         </div>
-        
+
         <div className='row'>
           <div className="col-12 footer-bottom py-4 text-center flex flex-column gap-1">
             <p>&copy; 2025 MySchool. All rights reserved.</p>

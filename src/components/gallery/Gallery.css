@@ -1,0 +1,66 @@
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.image-grid-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+.image-column {
+  flex: 1 1 30%; /* Default 3 columns layout */
+}
+
+.image-item {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.image-item:hover {
+  transform: scale(1.05); /* Zoom-in effect on hover */
+  opacity: 0.8; /* Slight opacity change on hover */
+}
+
+/* Fade-in animation when component loads */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 1200px) {
+  .image-column {
+    flex: 1 1 45%; /* Two columns on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .image-column {
+    flex: 1 1 100%; /* Single column on small screens */
+  }
+}
+
+/* some css from other component */
+.notice-p {
+
+  width: 600px;
+  
+}
+
+.update{
+  margin:7rem 3rem;
+  float: right;
+  
+}

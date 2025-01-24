@@ -1,3 +1,5 @@
+import FaqSection from "../../components/faq/FaqSection";
+import Gallery from "../../components/gallery/Gallery";
 import HeroSection from "../../components/herosection/HeroSection";
 
 const HomePage = () => {
@@ -6,6 +8,8 @@ const HomePage = () => {
       <div className="row">
         <HeroSection /> 
       </div>
+      <Gallery />
+      <FaqSection/>
     </div>
   );
 };

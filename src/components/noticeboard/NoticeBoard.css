@@ -1,0 +1,128 @@
+/* Notice Board Container */
+.notice-board {
+    background: linear-gradient(145deg, #e3e6e9, #e6e6e6);
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Notice Board Title */
+.notice-board h1 {
+    font-size: 2rem;
+    color: #000000;
+    border-bottom: 2px solid #ff4d4d;
+    padding-bottom: 0.6rem;
+    display: inline-block;
+}
+
+/* List Styles */
+.notice-board ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Individual List Items */
+.notice-board li {
+    font-size: 1.2rem;
+    margin: 15px 0;
+    padding: 10px;
+    background: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effects for List Items */
+.notice-board li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    background: yellow;
+    cursor: pointer;
+}
+
+/* Responsive Styles for Tablets and Larger Devices */
+@media (min-width: 768px) {
+    .notice-board {
+        max-width: 700px;
+        /* Increased max-width for tablets */
+    }
+
+
+    .notice-board h1 {
+        font-size: 2.5rem;
+        /* Larger title for tablets */
+    }
+
+    .notice-board li {
+        font-size: 1.2rem;
+        /* Maintain font size for larger screens */
+    }
+}
+
+/* Responsive Styles for Small Devices (Mobile Phones) */
+@media (max-width: 768px) {
+    .notice-board {
+        padding: 20px;
+        /* Reduced padding on smaller devices */
+        margin: 3rem auto;
+    }
+
+    .update {
+        margin: 0 auto;
+        padding: 2rem;
+    }
+
+    .notice-p {
+
+        width: 17rem;
+        margin: 0 auto;
+    }
+
+    .notice-board h1 {
+        font-size: 1.8rem;
+        /* Slightly smaller font for smaller screens */
+    }
+
+    .notice-board li {
+        font-size: 1rem;
+        /* Slightly smaller font for readability */
+        padding: 12px;
+        /* Slightly reduced padding for mobile */
+    }
+}
+
+/* Responsive Styles for Extra Small Devices (Phones) */
+@media (max-width: 480px) {
+    .notice-board {
+        padding: 15px;
+        /* Further reduce padding on extra small devices */
+    }
+
+    .notice-board h1 {
+        font-size: 1.5rem;
+        /* Small title for small screens */
+    }
+
+    .notice-board li {
+        font-size: 0.9rem;
+        /* Even smaller font for small mobile devices */
+        padding: 8px;
+        /* Further reduced padding for mobile */
+    }
+
+    .notice-board li:hover {
+        transform: translateY(-3px);
+        /* Less aggressive hover effect */
+    }
+}
+
+/* Center Alignment for Text in Special Cases */
+.text-md-end {
+    min-width: 358px;
+    text-align: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+/* Custom CSS for Image Grid Layout */

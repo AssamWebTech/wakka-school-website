@@ -1,13 +1,10 @@
 import "./HeroSec.css";
 import "./Team.css";
-import "./Gallery.css";
-import Faq from "./Faq";
 import Team from "./Team";
-import CountUp from "react-countup";
 import Counter from "./Counter";
-import Gallery from "./Gallery";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import NoticeBoard from "../noticeboard/NoticeBoard";
 
 const HeroSection = () => {
   const navigate = useNavigate();
@@ -59,13 +56,6 @@ const HeroSection = () => {
     "../../../public/Assets/WhatsApp Image 2025-01-20 at 2.51.02 PM (1).jpeg",
     "../../../public/Assets/WhatsApp Image 2025-01-20 at 2.51.05 PM.jpeg",
     "../../../public/Assets/WhatsApp Image 2025-01-20 at 2.51.08 PM (1).jpeg",
-  ];
-  const notices = [
-    "Welcome to the Notice Board!",
-    "Exam schedule has been released. Check the official portal.",
-    "Annual Sports Day is scheduled for next month.",
-    "Maintenance alert: The library will be closed this Friday.",
-    "Submit your project reports by the end of this week.",
   ];
   return (
     <>
@@ -196,14 +186,7 @@ const HeroSection = () => {
         </div>
       </div>
 
-      <div className="notice-board">
-        <h1>Notice Board</h1>
-        <ul>
-          {notices.map((notice, index) => (
-            <li key={index}>{notice}</li>
-          ))}
-        </ul>
-      </div>
+      <NoticeBoard />
       <section className="infrastructure-counters">
         <h2 className="section-title">Infrastructure Overview</h2>
 
@@ -216,12 +199,6 @@ const HeroSection = () => {
       </section>
 
       <Team />
-
-      <div>
-        <div />
-        <Gallery />
-      </div>
-      <Faq />
     </>
   );
 };
