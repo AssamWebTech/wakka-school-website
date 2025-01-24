@@ -24,13 +24,13 @@ const Events = () => {
                   <img src='../../../public/Assets/p1.jpeg' height={'100%'} width={'100%'}></img>
                 </div>
               }
-              <div className="col-6 flex flex-column gap-3">
+              <div className="col-6 d-flex flex-column gap-3">
                 <div className="event-title">{item.title}</div>
-                <div className="flex flex-row gap-5 event-datetime">
-                  <div className="flex gap-2 align-items-center">
+                <div className="d-flex flex-row gap-5 event-datetime">
+                  <div className="d-flex gap-2 align-items-center">
                     <FontAwesomeIcon icon={faCalendarAlt} />{item.date}
                   </div>
-                  <div className="flex gap-2 align-items-center">
+                  <div className="d-flex gap-2 align-items-center">
                     <FontAwesomeIcon icon={faClock} />{item.time}
                   </div>
                 </div>

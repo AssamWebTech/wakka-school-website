@@ -36,16 +36,13 @@ export const ContactUs = () => {
                 wrapperClass="mb-4"
                 type="email"
                 id="form6Example5"
-                
               />
               <label>Phone</label>
 
               <MDBInput
-                 
                 wrapperClass="mb-4"
                 type="tel"
                 id="form6Example6"
-                
               />
               <label>Additional Information</label>
               <MDBTextArea

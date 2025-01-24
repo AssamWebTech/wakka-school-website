@@ -33,24 +33,26 @@ const Infrastructure: React.FC = () => {
         </p>
       </div>
       <div className="col-md-8 col-12 counter-grid">
-        {counters.map((counter, index) => (
-          <div className="counter-card" key={index} style={{ borderLeft: `5px solid ${counter.color}` }}>
-            <div className="counter-image">
-              <img src={counter.imgSrc} alt={counter.title} />
+        {counters.map((counter, index) => {
+          return (
+            <div className="counter-card" key={index} style={{ borderLeft: `5px solid ${counter.color}` }}>
+              <div className="counter-image">
+                <img src={counter.imgSrc} alt={counter.title} />
+              </div>
+              <h2 className="counter-value">{countValues[index]}</h2>
+              <p className="counter-label">{counter.title}</p>
+              <div className="progress-bar">
+                <div
+                  className="progress"
+                  style={{
+                    width: `${(countValues[index] / counter.value) * 100}%`,
+                    backgroundColor: counter.color,
+                  }}
+                ></div>
+              </div>
             </div>
-            <h2 className="counter-value">{countValues[index]}</h2>
-            <p className="counter-label">{counter.title}</p>
-            <div className="progress-bar">
-              <div
-                className="progress"
-                style={{
-                  width: `${(countValues[index] / counter.value) * 100}%`,
-                  backgroundColor: counter.color,
-                }}
-              ></div>
-            </div>
-          </div>
-        ))}
+          )
+        })}
       </div>
     </section>
   );

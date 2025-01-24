@@ -5,7 +5,7 @@ export const LocateUs = () => {
   return (
     <>
     <section className="row contact-section justify-content-center py-5 gap-5">
-      <div className="col-12 text-center header flex flex-column gap-2">
+      <div className="col-12 text-center header d-flex flex-column gap-2">
         <h2>Locate Us</h2>
         <p>
           We’d love to hear from you! Contact us for any inquiries or visit

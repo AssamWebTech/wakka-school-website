@@ -1,0 +1,25 @@
+.previous-notice-section {
+    background: linear-gradient(to bottom right, #f5f7fa, #cfd9df);
+}
+
+.notice-list > li {
+    padding: 1rem;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    margin: 1rem 0;
+}
+
+.notice-upload-input {
+    border: 1px solid rgba(0, 0, 0, 0.3) !important;
+    border-radius: 5px !important;
+    padding: 0.5rem !important;
+}
+
+.modal-footer {
+    border-top: none !important;
+}
+
+.modal-content {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
