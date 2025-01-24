@@ -1,16 +1,19 @@
 /* Notice Board Container */
 .notice-board {
-    background: linear-gradient(145deg, #e3e6e9, #e6e6e6);
+    background-image: url(../../../public/Assets/notice.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     text-align: center;
+    font-family: "Roboto", sans-serif;
 }
 
 /* Notice Board Title */
 .notice-board h1 {
     font-size: 2rem;
-    color: #000000;
-    border-bottom: 2px solid #ff4d4d;
+    color: #6f1308;
+    border-bottom: 2px solid #0617b0;
     padding-bottom: 0.6rem;
     display: inline-block;
 }
@@ -26,11 +29,12 @@
 .notice-board li {
     font-size: 1.2rem;
     margin: 15px 0;
-    padding: 10px;
+    padding: 15px;
     background: #ffffff;
     border-radius: 5px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
 }
 
 /* Hover Effects for List Items */

@@ -12,7 +12,7 @@ const Navbar = () => {
 
   return (
     <nav>
-      <h2 className="logo">Wakka Govt HS School</h2>
+      <h2 className="logo">Govt HS School Wakka </h2>
       <div className={`menu ${menuOpen ? "close-icon" : ""}`} onClick={toggleMenu}>
         <span></span>
         <span></span>

@@ -13,7 +13,7 @@ const NoticeBoard = () => {
         <div className='col-12'>
             <h1>Notice Board</h1>
         </div>
-        <div className='col-md-10 col-12'>
+        <div className='col-md-8 col-12'>
             <ul>
                 {notices.map((notice, index) => (
                 <li key={index}>{notice}</li>

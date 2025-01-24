@@ -1,115 +1,108 @@
-/* Custom CSS for the Meet Our Teachers Section */
-.teachers-section {
-  padding: 3rem 2rem;
-  background-color: #100f1d;
+/* Meet Our Teachers Section */
+.meet-our-teachers {
+  padding: 6rem 5rem;
+  background: linear-gradient(to bottom right, #f5f7fa, #cfd9df); /* Clean gradient background */
+  text-align: center;
+  font-family: "Roboto", sans-serif;
 }
 
-.section-header h2 {
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-  color: #fefefe;
+.meet-our-teachers h1 {
+  font-size: 2.5rem;
+  color: #0f359e; /* Dark text for contrast */
+  margin-bottom: 30px;
 }
 
-.section-header p {
-  font-size: 1.1rem;
-  color: #f8f0f0;
+/* Teacher Grid */
+.teacher-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.teachers-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
-  margin-top: 2rem;
-}
-
+/* Teacher Card */
 .teacher-card {
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  width: 220px;
+  background: #ffffff; /* White card background */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  padding: 20px;
+  text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .teacher-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Enhanced hover shadow */
 }
 
+/* Teacher Image */
 .teacher-image {
   width: 100%;
-  height: 200px;
+  max-width: 150px;
+  height: 150px;
   object-fit: cover;
-  transition: transform 0.3s ease;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  border: 3px solid #e0e0e0; /* Border around image */
 }
 
-.teacher-info {
-  padding: 1rem;
-  text-align: center;
+/* Teacher Info */
+.teacher-card h2 {
+  font-size: 1.5rem;
+  color: #444;
+  margin: 10px 0 5px;
 }
 
-.teacher-info h3 {
+.teacher-card h3 {
   font-size: 1.2rem;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-  color: #333;
+  color: #777;
+  margin-bottom: 15px;
 }
 
-.teacher-info p {
+.teacher-card p {
   font-size: 1rem;
-  color: #777;
+  color: #666;
+  line-height: 1.5;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .teachers-grid {
-    justify-content: space-evenly;
+  .meet-our-teachers h1 {
+    font-size: 2rem;
   }
 
-  .teacher-card {
-    width: 180px;
-  }
-}
-
-@media (max-width: 480px) {
-  .teachers-grid {
-    justify-content: center;
+  .teacher-card h2 {
+    font-size: 1.3rem;
   }
 
-  .teacher-card {
-    width: 150px;
-  }
-}
-
-
-@media (max-width: 480px) {
-  .section-header h2 {
-    font-size: 1.5rem;
-  }
-
-  .section-header p {
+  .teacher-card h3 {
     font-size: 1rem;
   }
 
-  .teachers-grid {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  }
-
-  .teacher-card {
-    width: auto;
-  }
-
-  .teacher-image {
-    height: 150px;
-  }
-
-  .teacher-info h3 {
-    font-size: 1rem;
-  }
-
-  .teacher-info p {
+  .teacher-card p {
     font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .meet-our-teachers {
+    padding: 20px;
+  }
+
+  .teacher-card {
+    padding: 15px;
+  }
+
+  .teacher-card h2 {
+    font-size: 1.2rem;
+  }
+
+  .teacher-card h3 {
+    font-size: 0.9rem;
+  }
+
+  .teacher-card p {
+    font-size: 0.85rem;
   }
 }
