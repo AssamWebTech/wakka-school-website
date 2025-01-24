@@ -1,63 +1,10 @@
+import { useNavigate } from "react-router-dom";
 import "./HeroSec.css";
-import "./Team.css";
-import Team from "./Team";
-import Counter from "./Counter";
 import { useState, useEffect } from "react";
-import NoticeBoard from "../noticeboard/NoticeBoard";
 
 const HeroSection = () => {
-  const counters = [
-    { id: 1, label: "Buildings", value: 20 },
-    { id: 2, label: "Servers", value: 150 },
-    { id: 3, label: "Employees", value: 500 },
-    { id: 4, label: "Projects Completed", value: 1200 },
-  ];
-  const teachers = [
-    {
-      id: 1,
-      name: "Alice Johnson",
-      subject: "Mathematics",
-      image:
-        "../../../public/Assets/WhatsApp Image 2025-01-20 at 2.48.59 PM.jpeg",
-    },
-    {
-      id: 2,
-      name: "Mark Smith",
-      subject: "Physics",
-      image:
-        "../../../public/Assets/WhatsApp Image 2025-01-20 at 2.48.58 PM (2).jpeg",
-    },
-    {
-      id: 3,
-      name: "Sophia Brown",
-      subject: "Chemistry",
-      image:
-        "../../../public/Assets/WhatsApp Image 2025-01-20 at 2.51.01 PM.jpeg",
-    },
-    {
-      id: 4,
-      name: "James Wilson",
-      subject: "English",
-      image:
-        "../../../public/Assets/WhatsApp Image 2025-01-20 at 2.50.55 PM.jpeg",
-    },
-  ];
-
-  const [modalSrc, setModalSrc] = useState<string | null>(null);
-
-  const images = [
-    "../../../public/Assets/WhatsApp Image 2025-01-20 at 2.51.08 PM.jpeg",
-    "../../../public/Assets/WhatsApp Image 2025-01-20 at 2.50.57 PM (2).jpeg",
-    "../../../public/Assets/WhatsApp Image 2025-01-20 at 2.51.02 PM (1).jpeg",
-    "../../../public/Assets/WhatsApp Image 2025-01-20 at 2.51.05 PM.jpeg",
-    "../../../public/Assets/WhatsApp Image 2025-01-20 at 2.51.08 PM (1).jpeg",
-    "../../../public/Assets/WhatsApp Image 2025-01-20 at 2.51.02 PM (1).jpeg",
-    "../../../public/Assets/WhatsApp Image 2025-01-20 at 2.51.05 PM.jpeg",
-    "../../../public/Assets/WhatsApp Image 2025-01-20 at 2.51.08 PM (1).jpeg",
-  ];
-
-
   const [currentDateTime, setCurrentDateTime] = useState<string>("");
+  const navigate = useNavigate();
 
   useEffect(() => {
     // Update the date and time dynamically
@@ -170,7 +117,7 @@ const HeroSection = () => {
             to meet and exceed your expectations. Join us on our journey to
             create a better, more connected future.
           </p>
-          <button type="button" className="btn btn-primary df">About Us</button>
+          <button type="button" className="btn btn-primary df" onClick={() => navigate('/about')}>About Us</button>
           
         </div>
         
@@ -189,47 +136,33 @@ const HeroSection = () => {
     </div>
       </div>
       <div>
-      <section className="notice-section">
-      <div className="notice-container">
-        <div className="notice-image">
-          <img
-            src="../../../public/Assets/N2.jpg"
-            alt="Notice Board"
-            className="responsive-image"
-          />
-        </div>
-        <div className="notice-content">
-          <h1 className="notice-title">Notice Updates</h1>
-          <p className="notice-date-time">Date & Time: {currentDateTime}</p>
-          <p className="notice-paragraph">
-            Stay informed with the latest updates and announcements! Here, you
-            will find essential information, upcoming events, and important
-            notices. Keep checking this section regularly to stay updated with
-            what's happening.
-          </p>
-          <p className="notice-paragraph">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae
-            sapien ut purus feugiat efficitur non a nisl. Suspendisse potenti.
-            Ut volutpat fermentum metus, sed vestibulum nisi ultrices id.
-          </p>
-        </div>
+        <section className="notice-section">
+          <div className="notice-container">
+            <div className="notice-image">
+              <img
+                src="../../../public/Assets/N2.jpg"
+                alt="Notice Board"
+                className="responsive-image"
+              />
+            </div>
+            <div className="notice-content">
+              <h1 className="notice-title">Notice Updates</h1>
+              <p className="notice-date-time">Date & Time: {currentDateTime}</p>
+              <p className="notice-paragraph">
+                Stay informed with the latest updates and announcements! Here, you
+                will find essential information, upcoming events, and important
+                notices. Keep checking this section regularly to stay updated with
+                what's happening.
+              </p>
+              <p className="notice-paragraph">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae
+                sapien ut purus feugiat efficitur non a nisl. Suspendisse potenti.
+                Ut volutpat fermentum metus, sed vestibulum nisi ultrices id.
+              </p>
+            </div>
+          </div>
+        </section>
       </div>
-    </section>
-      </div>
-
-      <NoticeBoard />
-      <section className="infrastructure-counters">
-        <h2 className="section-title">Infrastructure Overview</h2>
-
-        <Counter />
-        <div className="action-btn">
-          <button type="button" className="btn btn-success">
-            Explore More
-          </button>
-        </div>
-      </section>
-
-      <Team />
     </>
   );
 };

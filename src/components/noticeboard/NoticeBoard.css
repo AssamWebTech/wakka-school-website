@@ -47,12 +47,6 @@
 
 /* Responsive Styles for Tablets and Larger Devices */
 @media (min-width: 768px) {
-    .notice-board {
-        max-width: 700px;
-        /* Increased max-width for tablets */
-    }
-
-
     .notice-board h1 {
         font-size: 2.5rem;
         /* Larger title for tablets */
@@ -66,12 +60,6 @@
 
 /* Responsive Styles for Small Devices (Mobile Phones) */
 @media (max-width: 768px) {
-    .notice-board {
-        padding: 20px;
-        /* Reduced padding on smaller devices */
-        margin: 3rem auto;
-    }
-
     .update {
         margin: 0 auto;
         padding: 2rem;
@@ -98,11 +86,6 @@
 
 /* Responsive Styles for Extra Small Devices (Phones) */
 @media (max-width: 480px) {
-    .notice-board {
-        padding: 15px;
-        /* Further reduce padding on extra small devices */
-    }
-
     .notice-board h1 {
         font-size: 1.5rem;
         /* Small title for small screens */

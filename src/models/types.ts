@@ -11,3 +11,10 @@ export type Achievement = {
     description: string,
     image: any
 }
+export type Teacher = {
+    id: number,
+    name: string,
+    subject: string,
+    bio: string,
+    image: any
+}

@@ -1,6 +1,6 @@
 /* Meet Our Teachers Section */
 .meet-our-teachers {
-  padding: 6rem 5rem;
+  /* padding: 6rem 5rem; */
   background: linear-gradient(to bottom right, #f5f7fa, #cfd9df); /* Clean gradient background */
   text-align: center;
   font-family: "Roboto", sans-serif;
@@ -9,7 +9,7 @@
 .meet-our-teachers h1 {
   font-size: 2.5rem;
   color: #0f359e; /* Dark text for contrast */
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
 }
 
 /* Teacher Grid */
@@ -18,7 +18,7 @@
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
   max-width: 1200px;
-  margin: 0 auto;
+  /* margin: 0 auto; */
 }
 
 /* Teacher Card */
@@ -29,6 +29,7 @@
   padding: 20px;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
 }
 
 .teacher-card:hover {

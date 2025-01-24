@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import "./Counter.css";
+import "./Infrastructure.css";
 
-const Counter: React.FC = () => {
+const Infrastructure: React.FC = () => {
   const counters = [
     { title: "Students", value: 1200, imgSrc: "../../../public/Assets/notice.jpg", color: "#3498db" },
     { title: "Teachers", value: 75, imgSrc: "../../../public/Assets/c2.jpeg", color: "#f39c12" },
@@ -25,14 +25,14 @@ const Counter: React.FC = () => {
   }, [counters]);
 
   return (
-    <section className="counter-section">
-      <div className="counter-header">
-        <h1 className="counter-title">Our Achievements</h1>
+    <section className="row counter-section">
+      <div className="col-12 counter-header">
+        <h1 className="counter-title">Infrastructure Overview</h1>
         <p className="counter-subtitle">
           These numbers reflect our dedication and success in education.
         </p>
       </div>
-      <div className="counter-grid">
+      <div className="col-md-8 col-12 counter-grid">
         {counters.map((counter, index) => (
           <div className="counter-card" key={index} style={{ borderLeft: `5px solid ${counter.color}` }}>
             <div className="counter-image">
@@ -56,4 +56,4 @@ const Counter: React.FC = () => {
   );
 };
 
-export default Counter;
+export default Infrastructure;
