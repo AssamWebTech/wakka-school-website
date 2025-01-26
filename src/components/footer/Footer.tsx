@@ -10,8 +10,9 @@ const SchoolFooter = () => {
         <div className='row d-flex justify-content-center px-5' style={{ paddingTop: '4rem', paddingBottom: '3rem' }}>
           {/* School Logo and Name */}
           <div className="col-md-3 col-12 footer-logo pb-5">
-            <img src="../../../public/Assets/WhatsApp Image 2025-01-20 at 2.51.08 PM.jpeg" alt="School Logo" className="school-logo" />
-            <h2>MySchool</h2>
+            <img src="../../../src/logo/Govt HS Wakka.png" alt="School Logo" className="school-logo" />
+            <h2>Govt HS Wakka</h2>
+           
           </div>
 
           <div className="col-md-3 col-12 d-flex flex-column gap-3 footer-block pb-5">

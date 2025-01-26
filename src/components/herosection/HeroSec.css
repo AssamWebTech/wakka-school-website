@@ -4,11 +4,23 @@ body {
   margin: 0;
   padding: 0;
 }
-
+.container  {
+  padding: 1rem;
+  font-family: Georgia;
+}
+/*today updates-26*/
+.row-content {
+  background-color: #adafb182;
+}
+.heading {
+  padding: 3rem;
+  color: #0f5ff2;
+  font-weight: 700;
+}
 /* Carousel */
 .carousel .carousel-inner {
   width: 100%;
-  height: 49rem;
+  height: 40rem;
   object-fit: fill;
 }
 
@@ -21,35 +33,44 @@ body {
   background-color: rgb(22, 144, 210);
   color: #1e0987;
   border-radius: 50%;
-  
-
 }
 .carousel-control-next-icon {
   background-color: rgb(22, 144, 210);
   color: #1e0987;
   border-radius: 50%;
- 
 }
 
-
+.about-container {
+  padding: 0rem;
+}
 /* Line */
 .line {
   width: 200px;
   text-align: center;
   margin: 0 auto;
-  color: blue;
+  
   position: relative;
   height: 4rem; /* Set the height of the HR line */
 }
 
 /* Font for Titles */
 .font {
-  color: rgb(19, 19, 73);
+  background-color: var(--primary-color);
+  color: #fff;
   text-align: center;
   font-weight: 700;
   font-size: 45px;
-  padding: 1rem;
+  padding: 1.0rem;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.font img {
+width: 80px;
+height: 80px;
+border-radius: 50%;
+}
+/*about-btn */
+.about-btn {
+  margin: 0 auto;
 }
 
 /* Infrastructure Counters Section */
@@ -157,22 +178,28 @@ body {
   .infrastructure-counters {
     padding: 6rem 2rem;
   }
-
+   .font {
+    margin: 0 ;
+   }
+   
   .section-title {
     font-size: 2rem;
   }
-
+  .carousel .carousel-inner {
+    width: 100%;
+    height: 40rem;
+    object-fit: fill;
+    margin: -3rem 0;
+  }
   .in-p {
     width: 100%;
     padding: 2rem;
   }
-
   .counters-container {
     flex-direction: column;
     align-items: center;
     gap: 20px;
   }
-
   .counter-item {
     width: 10rem;
     height: 12rem;
@@ -196,42 +223,53 @@ body {
 @media (max-width: 480px) {
   .font {
     font-size: 30px;
-    padding: 0.5rem;
+    padding: 0.6rem ;
+    align-items: center;
+    text-align: center;
   }
  .carousel {
-  top: 5rem;
+  top: 3rem;
  }
   .font{
     margin: -500px 2rem;
     position: absolute;
     width: 300px;
-   
+  }
+  .font {
+    margin: -370px 1.6rem;
+    width: 300px;
+    height: 13rem;
+  }
+  .line {
+    display: none;
   
+  }
+  .about-section{
+    padding: 5rem;
+  }
+  .about-image {
+    width: 300px;
+    height: 300px;
   }
   .section-title {
     font-size: 1.8rem;
     margin-bottom: 3rem;
   }
-
   .counters-container {
     gap: 15px;
   }
-
   .counter-item {
     width: 8rem;
     height: 10rem;
     padding: 15px;
   }
-
   .counter-value {
     font-size: 1.4rem;
     padding: 2rem;
   }
-
   .counter-label {
     font-size: 0.9rem;
   }
-
   .in-p {
     width: 100%;
     padding: 1rem;
@@ -244,7 +282,6 @@ body {
   color: #333; /* Neutral text color for better readability */
   font-family: "Roboto", sans-serif;
 }
-
 .notice-container {
   display: flex;
   align-items: center;
@@ -263,7 +300,6 @@ body {
 .notice-image {
   flex: 1;
 }
-
 .responsive-image {
   width: 100%;
   max-width: 300px;
@@ -426,9 +462,17 @@ body {
 /* Responsive Styles for Mobile */
 @media (max-width: 480px) {
   .about-container {
-    gap: 16px;
+    margin-top: -8rem;
   }
-
+   .about-image {
+    width: 24rem;
+    height: 24rem;
+   }
+   .carousel button{
+    
+    margin-bottom: 31rem;
+    
+   }
   .about-title {
     font-size: 1.5rem;
   }
@@ -439,5 +483,9 @@ body {
 
   .responsive-image {
     max-width: 100%;
+  }
+  .font {
+    margin: -23rem 0.7rem;
+
   }
 }

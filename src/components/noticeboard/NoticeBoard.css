@@ -10,13 +10,7 @@
 }
 
 /* Notice Board Title */
-.notice-board h1 {
-    font-size: 2rem;
-    color: #6f1308;
-    border-bottom: 2px solid #0617b0;
-    padding-bottom: 0.6rem;
-    display: inline-block;
-}
+
 
 /* List Styles */
 .notice-board ul {
@@ -35,14 +29,16 @@
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: left;
+    text-align: center;
 }
 
 /* Hover Effects for List Items */
 .notice-board li:hover {
     transform: translateY(-5px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    background: yellow;
+    background: #285aff;
     cursor: pointer;
+    color: #ffffff;
 }
 
 /* Responsive Styles for Tablets and Larger Devices */

@@ -11,7 +11,7 @@ const NoticeBoard = () => {
   return (
     <section className="row notice-board py-5 justify-content-center gap-4">
         <div className='col-12'>
-            <h1>Notice Board</h1>
+            <h1  className='large-title'>Notice Board</h1>
         </div>
         <div className='col-md-8 col-12'>
             <ul>

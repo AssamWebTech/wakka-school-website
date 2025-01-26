@@ -5,7 +5,7 @@ import './TeacherSection.css';
 const TeacherSection = () => {
   return (
     <section className='row meet-our-teachers py-5 justify-content-center gap-5'>
-      <div className="col-12">
+      <div className="global-title">
         <h1>Meet Our Teachers</h1>
       </div>
       <div className="col-12 teacher-grid">

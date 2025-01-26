@@ -92,18 +92,20 @@ const HeroSection = () => {
       </div>
       <div className="extra-sec">
         <h2 className="font">
-          Welcome to Wakka Best CBSE Board School in India
+          <img src="../../../src/logo/Govt HS Wakka.png" alt="" />
+          <br />
+          Welcome to Govt Higher Secondary School Wakka
         </h2>
 
         <hr className="line" />
 
-        <div className="container text-center ">
-          <div className="row">
+        <div className="container text-center">
+           <div className="row">
             
-            <section className="about-section">
+     <section className="about-section">
       <div className="about-container">
         <div className="about-text">
-          <h1 className="about-title">About Us</h1>
+          <h1 className="global-title ">About Us</h1>
           <p className="about-paragraph">
             Welcome to our website! We are dedicated to providing exceptional
             services that empower individuals and organizations. Our mission is
@@ -117,7 +119,7 @@ const HeroSection = () => {
             to meet and exceed your expectations. Join us on our journey to
             create a better, more connected future.
           </p>
-          <button type="button" className="btn btn-primary df" onClick={() => navigate('/about')}>About Us</button>
+          <button type="button" className="btn btn-primary about-btn" onClick={() => navigate('/about')}>About Us</button>
           
         </div>
         
@@ -127,16 +129,35 @@ const HeroSection = () => {
             alt="About Us"
             className="responsive-image"
           />
+          
         </div>
+        
       </div>
       
     </section>
     </div>
-    
+       {/* </section>  */}
+       <div className="container text-center">
+  <div className="row row-content">
+    <h2 className="heading">Introduction</h2>
+    <div className="col">
+      <h2>School Description</h2>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed porro nulla saepe dolores, earum, pariatur ipsa rem ratione ab quos iure quisquam amet quibusdam sit, numquam eius commodi asperiores quae!
+    </div>
+    <div className="col">
+    <h2>School Description</h2>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus beatae cum commodi sint mollitia similique aut quia, quibusdam animi at. Voluptatum inventore sed nam nihil ipsam eos libero ipsa? Temporibus!
+    </div>
+    <div className="col">
+    <h2>School Description</h2>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum voluptatibus beatae est culpa distinctio reiciendis dicta saepe non. Sint reprehenderit fugit amet dolorem similique ad, aliquam omnis facilis cupiditate soluta.
+    </div>
+  </div>
+</div>
     </div>
       </div>
       <div>
-        <section className="notice-section">
+        {/* {/* <section className="notice-section">
           <div className="notice-container">
             <div className="notice-image">
               <img
@@ -144,9 +165,11 @@ const HeroSection = () => {
                 alt="Notice Board"
                 className="responsive-image"
               />
-            </div>
-            <div className="notice-content">
-              <h1 className="notice-title">Notice Updates</h1>
+              
+              
+            </div> */}
+            {/* <div className="notice-content">
+              <h1 className="global-title ">Notice Updates</h1>
               <p className="notice-date-time">Date & Time: {currentDateTime}</p>
               <p className="notice-paragraph">
                 Stay informed with the latest updates and announcements! Here, you
@@ -159,10 +182,9 @@ const HeroSection = () => {
                 sapien ut purus feugiat efficitur non a nisl. Suspendisse potenti.
                 Ut volutpat fermentum metus, sed vestibulum nisi ultrices id.
               </p>
-            </div>
+            </div> */}
           </div>
-        </section>
-      </div>
+       
     </>
   );
 };

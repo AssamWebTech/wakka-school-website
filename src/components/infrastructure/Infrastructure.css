@@ -1,9 +1,9 @@
 /* Counter Section */
 .counter-section {
   /* padding: 40px 20px; */
-  /* background: linear-gradient(135deg, #f1f5f8, #e9edf5); */
+  background: linear-gradient(135deg, #f1f5f8, #e9edf5);
   text-align: center;
-  font-family: "Poppins", sans-serif;
+  font-family: Verdana;
   position: relative;
   overflow: hidden;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
@@ -23,15 +23,12 @@
   font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase;
-
   -webkit-background-clip: text;
-  
 }
 
 .counter-subtitle {
   font-size: 1.4rem;
   color: #7f8c8d;
-  
 }
 
 /* Counter Grid */
@@ -137,7 +134,9 @@
   .counter-title {
     font-size: 2.2rem;
   }
-
+  .counter-card {
+    margin: 0 auto;
+  }
   .counter-subtitle {
     font-size: 1rem;
   }

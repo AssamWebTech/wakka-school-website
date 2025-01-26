@@ -1,6 +1,6 @@
 /* Section Styling */
 .contact-section {
-    background: linear-gradient(135deg, #6c63ff, #2843f7);
+     background: linear-gradient(185deg, #6c63ff, #2843f7);
     color: #fff;
     font-family: "Poppins", sans-serif;
   }
@@ -12,6 +12,7 @@
     color: #ffffff;
   }
   
+
   .header p {
     font-size: 1.2rem;
     color: #e0e0e0;

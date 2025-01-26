@@ -1,12 +1,16 @@
   /* Footer Container */
   .school-footer {
-    background: linear-gradient(135deg, #0066cc, #004d99);
+    background: #061750;
+    overflow-x: hidden;
     color: #fff;
     text-align: left;
     border-top: 5px solid #ffab00;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   }
-  
+  .footer-logo {
+    padding: 4rem ;
+    background: none;
+  }
   /* School Logo */
   .footer-logo h2 {
     margin: 0;
@@ -14,13 +18,18 @@
     font-weight: 600;
     letter-spacing: 1px;
     color: #fff;
+    width: 200px;
   }
-  
+  .footer-logo p {
+    width: 300px;
+    padding: 1rem;
+    text-align: left;
+    
+  }
   .school-logo {
-    width: 60px;
-    height: 60px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
-    height: auto;
   }
 
   .footer-block{
@@ -29,42 +38,35 @@
 
   .footer-title {
     color: #ffab00;
-    font-size: 2.5rem;
+    font-size: 2.4rem;
     text-transform: capitalize;
     font-family: 'Roboto',sans-serif;
-    font-weight: 600;
+    font-weight: 500;
   }
-
   .footer-block ul {
     list-style-type: none;
     padding: 0;
   }
-
   .footer-block ul li {
     padding-bottom: 0.5rem;
   }
-
   .footer-block a {
     color: #fff;
     text-decoration: none;
     font-size: 1.2rem;
     transition: color 0.3s ease, transform 0.3s ease;
   }
-  
   .footer-block ul li:hover {
     color: #ffab00;
     transform: translateX(10px);
   }
-
   .footer-block a:hover {
     color: #ffab00;
   }
-
   /* Hover & Animation Effects */
   .footer-block ul li a {
     position: relative;
   }
-  
   .footer-block ul li a::before {
     content: '';
     position: absolute;
@@ -75,11 +77,9 @@
     left: 0;
     transition: width 0.3s ease;
   }
-  
   .footer-block ul li a:hover::before {
     width: 100%;
   }
-  
   /* Footer Bottom */
   .footer-bottom {
     font-size: 1.2rem;
@@ -87,7 +87,6 @@
     color: #f0f0f0;
     border-top: 2px solid #333;
   }
-
   .footer-bottom p {
     padding: 0;
     margin: 0;
@@ -130,26 +129,47 @@
   } */
   
   /* Responsive Styles */
-  /* @media (max-width: 768px) {
+   @media (max-width: 768px) {
     .footer-container {
       flex-direction: column;
       align-items: center;
+      overflow-x: hidden;
+    
     }
-  
     .footer-logo {
       text-align: center;
       margin-bottom: 20px;
     }
-  
     .footer-links ul, .footer-social ul {
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: 10px;
     }
-  
     .footer-bottom {
       font-size: 14px;
     }
-  } */
-  
+  } 
+  /*today updates-26*/
+  @media (max-width: 480px) {
+    .school-footer {
+      margin: 0 auto;
+      overflow-x: hidden ;
+    }
+    .footer-container  {
+    margin: 0 auto;
+    }
+    .school-logo{
+      margin: -6rem auto;
+    }
+    .footer-logo h2 {
+       margin: 3rem auto;  
+    } 
+    .footer-title {
+     text-align: center;
+    }
+    .footer-links{
+      text-align: center;
+      margin: 0 auto;
+  }
+}

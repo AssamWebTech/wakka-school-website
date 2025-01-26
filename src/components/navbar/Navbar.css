@@ -57,7 +57,7 @@ nav ul li a.active::before {
 nav .logo {
   font-size: 2.2rem;
   text-decoration: none;
-  color: #01162c;
+  color: var(--primary-color);
   font-weight: bold;
 }
 

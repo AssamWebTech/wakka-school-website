@@ -7,7 +7,7 @@ const FaqSection = () => {
   return (
     <section className="row faq-section py-5 bg-gray-50 justify-content-center">
       <div className="col-12 text-center d-flex flex-column gap-1 mb-5">
-        <h2 className="section-title">Frequently Asked Questions</h2>
+        <h2 className="global-title">Frequently Asked Questions</h2>
         <p className="section-subtitle">
           Amet minim mollit non deserunt ullamco est sit aliqua dolor do
         </p>

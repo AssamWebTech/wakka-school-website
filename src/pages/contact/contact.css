@@ -4,6 +4,9 @@
   box-shadow: 0 34px 28px rgba(0, 0, 0, 0.2);
 }
 
+  /* background: rgb(0,82,255);
+background: radial-gradient(circle, rgba(0, 81, 255, 0.203) 0%, rgba(255,255,255,1) 100%);
+} */
 .heading-c h2 {
   text-align: center;
   color: blue;
@@ -173,4 +176,8 @@ form textarea {
         font-size: 1rem;
         padding: 0.7rem 1.5rem;
     }
+}
+  /*recent update-26*/
+  .container-fluid {
+  padding: 1rem;
 }
