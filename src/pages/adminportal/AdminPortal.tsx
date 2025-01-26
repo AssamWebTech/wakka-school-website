@@ -3,31 +3,59 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import './AdminPortal.css';
 import { MDBInput, MDBTextArea } from "mdb-react-ui-kit";
 import { useState } from "react";
+import { noticeList } from "../../static/notices";
+import { Notice } from "../../models/types";
 
 const AdminPortal = () => {
-  const [notices, setNotices] = useState<string[]>([
-    "Welcome to the Notice Board!",
-    "Exam schedule has been released. Check the official portal.",
-    "Annual Sports Day is scheduled for next month.",
-    "Maintenance alert: The library will be closed this Friday.",
-    "Submit your project reports by the end of this week.",
-  ]);
+  const [notices, setNotices] = useState<Notice[]>(noticeList);
   const [noticeTitle, setNoticeTitle] = useState<string>('');
   const [noticeDetails, setNoticeDetails] = useState<string>('');
+  const [noticeId, setNoticeId] = useState<number>(0);
+  const [isEditMode, setIsEditMode] = useState<boolean>(false);
 
   const handleSubmit = () => {
-    if(noticeTitle !== '') {
-      setNotices([
-        ...notices,
-        noticeTitle
-      ])
+    if(isEditMode) {
+      const updatedNotices = notices. map(notice => {
+        if(notice.id === noticeId) {
+          notice.title = noticeTitle
+          notice.details = noticeDetails
+        }
+        return notice
+      })
+      setNotices(updatedNotices)
+    }
+    else {
+      if(noticeTitle !== '') {
+        setNotices([
+          ...notices,
+          {
+            id: notices.length+1, 
+            title: noticeTitle,
+            details: noticeDetails
+          }
+        ])
+      }
     }
     closeModal()
   }
 
   const closeModal = () => {
+    setNoticeId(0)
     setNoticeTitle('')
     setNoticeDetails('')
+    setIsEditMode(false)
+  }
+
+  const deleteNotice = (id: number) => {
+    const newNotices = notices.filter(notice => notice.id !== id);
+    setNotices(newNotices)
+  }
+
+  const editNotice = (notice: Notice) => {
+    setNoticeId(notice.id);
+    setNoticeTitle(notice.title);
+    setNoticeDetails(notice.details);
+    setIsEditMode(true);
   }
 
   return (
@@ -41,14 +69,14 @@ const AdminPortal = () => {
         </div>
         <div className="col-md-8 col-12">
           <ul className="list-group notice-list">
-            {notices.map((notice, index) => (
-              <li className="list-group-item d-flex flex-row justify-content-between gap-2 align-items-center" key={index}>
+            {notices.map((notice: Notice) => (
+              <li className="list-group-item d-flex flex-row justify-content-between gap-2 align-items-center" key={notice.id}>
                 <div>
-                  {notice}
+                  {notice.title}
                 </div>
                 <div className="d-flex flex-row gap-2">
-                  <button className="btn"><FontAwesomeIcon icon={faPencilAlt} className="text-primary fs-5" /></button>
-                  <button className="btn"><FontAwesomeIcon icon={faTrashAlt} className="text-primary fs-5" /></button>
+                  <button className="btn" data-bs-toggle="modal" data-bs-target="#noticeUploader" onClick={() => editNotice(notice)}><FontAwesomeIcon icon={faPencilAlt} className="text-primary fs-5" /></button>
+                  <button className="btn" onClick={() => deleteNotice(notice.id)}><FontAwesomeIcon icon={faTrashAlt} className="text-primary fs-5" /></button>
                 </div>
               </li>
               )
@@ -62,7 +90,7 @@ const AdminPortal = () => {
         <div className="modal-dialog modal-dialog-centered">
           <div className="modal-content">
             <div className="modal-header">
-              <h1 className="modal-title fs-4 fw-bolder" id="noticeUploadLabel">Upload New Notice</h1>
+              <h1 className="modal-title fs-4 fw-bolder" id="noticeUploadLabel">{ isEditMode ? 'Update Existing Notice' : 'Upload New Notice' }</h1>
               <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close" onClick={closeModal}></button>
             </div>
             <div className="modal-body d-flex flex-column gap-3">
@@ -80,7 +108,6 @@ const AdminPortal = () => {
               <div className="d-flex flex-column gap-2">
                 <label className="fw-bold fs-5">Notice Details</label>
                 <MDBTextArea 
-                  textarea
                   id="noticeDetails"
                   rows={4}
                   className="notice-upload-input"
