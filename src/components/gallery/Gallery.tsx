@@ -24,7 +24,6 @@ const Gallery = () => {
             alt="Wintry Mountain Landscape"
           />
         </div>
-
         <div className="image-column">
           <img
             src="../../../public/Assets/Gallery-3.jpeg"
@@ -36,16 +35,13 @@ const Gallery = () => {
             className="image-item"
             alt="Boat on Calm Water"
           />
-          
         </div>
-
         <div className="image-column">
           <img
             src="../../../public/Assets/p1.jpeg"
             className="image-item"
             alt="Waves at Sea"
           />
-          
           <img
             src="../../../public/Assets/Gallery-5.jpeg"
             className="image-item"
@@ -56,14 +52,7 @@ const Gallery = () => {
             className="image-item"
             alt="Yosemite National Park"
           />
-          
         </div>
-        <img
-            src="../../../public/Assets/Gallery-7.jpeg"
-            className="image-item"
-            alt="Yosemite National Park"
-          />
-      
       </div>
     </section>
   )

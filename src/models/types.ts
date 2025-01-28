@@ -18,3 +18,8 @@ export type Teacher = {
     bio: string,
     image: any
 }
+export type Notice = {
+    id: number,
+    title: string,
+    details: string
+}
